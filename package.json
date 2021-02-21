@@ -1,0 +1,17 @@
+{
+  "name": "tasktrufla",
+  "version": "1.0.0",
+  "description": "Trufla task",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass — watch scss -o css",
+    "test": "npm test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "bootstrap": "^4.6.0",
+    "node-sass": "^5.0.0"
+  }
+}

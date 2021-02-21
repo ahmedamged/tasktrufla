@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5B4AAE65-DB33-4C61-B583-056371F7F19A</title>
+    <defs>
+        <path d="M23.625,12 C23.625,18.4203281 18.4203281,23.625 12,23.625 C5.57967188,23.625 0.375,18.4203281 0.375,12 C0.375,5.57967188 5.57967187,0.375 12,0.375 C18.4203281,0.375 23.625,5.57967187 23.625,12 Z M10.6553438,18.1553438 L19.2803438,9.53034375 C19.5732187,9.23746875 19.5732187,8.76257813 19.2803438,8.46970313 L18.2197031,7.4090625 C17.9268281,7.11614062 17.4519375,7.11614062 17.1590156,7.4090625 L10.125,14.4430313 L6.84098437,11.1590156 C6.54810938,10.8661406 6.07321875,10.8661406 5.78029688,11.1590156 L4.71965625,12.2196562 C4.42678125,12.5125312 4.42678125,12.9874219 4.71965625,13.2802969 L9.59465625,18.1552969 C9.88757813,18.4482188 10.3624219,18.4482188 10.6553438,18.1553438 L10.6553438,18.1553438 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---Desktop" transform="translate(-247.000000, -1844.000000)">
+            <g id="Group-3" transform="translate(0.000000, 1170.000000)">
+                <g id="Group-2" transform="translate(247.000000, 670.000000)">
+                    <g id="icon" transform="translate(0.000000, 4.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="Color" mask="url(#mask-2)" fill="#6F759D">
+                            <rect id="Rectangle-5" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
