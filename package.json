@@ -2,16 +2,23 @@
   "name": "tasktrufla",
   "version": "1.0.0",
   "description": "Trufla task",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "scss": "node-sass — watch scss -o css",
+    "serve": "node app.js",
     "test": "npm test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.0-beta2",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "roboto-fontface": "^0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
   }
 }

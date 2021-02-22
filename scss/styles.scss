@@ -1,0 +1,85 @@
+@font-face{
+  font-family: 'Roboto';
+  src: url(./fonts/Roboto-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'robotobold';
+  src: url(./fonts/Roboto-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'robotomedium';
+  src: url(./fonts/Roboto-Medium.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-row{
+  padding: 20px 0px;
+}
+
+.header-nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li, a, .quote-btn{
+    font-family: robotobold, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  li, a, a:hover{
+    color: #42415B;
+  }
+  li {
+    display: inline;
+    padding-right: 10px;
+    line-height: 16px;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 16px;
+  }
+  .quote-btn{
+    height: 50px;
+    width: 160px;
+    border-radius: 4px;
+    background-color: #F1A153;
+    color: #fff;
+    border: none;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  .btn:hover{
+    color: #fff;
+  }
+}
+
+.logo-placeholder {
+  height: 40px;
+  width: 116px;
+}
+
+.logo-placeholder-tablet-logo-p {
+  height: 40px;
+  width: 116px;
+}
+
+.logo-placeholder-mobile-logo-p {
+  height: 27px;
+  width: 75px;
+}
