@@ -73,13 +73,25 @@
 .quote-btn{
   height: 50px;
   width: 160px;
+  @extend %roboto-bold;
+}
+
+.hero-quote-btn{
+  height: 60px;
+  width: 200px;
+  @extend %font-roboto;
+  font-size: 18px;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.quote-btn, .hero-quote-btn{
   border-radius: 4px;
   background-color: #F1A153;
   color: #fff;
   border: none;
   line-height: 20px;
   text-transform: uppercase;
-  @extend %roboto-bold;
 }
 
 .logo-placeholder {
@@ -103,6 +115,28 @@
   background-color: #9CA2C6;
   height: 50px;
   padding: 0;
+}
+
+.hero-wrapper{
+  background: url('../images/hero-img.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .main-heading{
+    @extend %roboto-bold;
+    font-size: 66px;
+    color: #fff;
+    text-align: left;
+    line-height: 80px;
+    margin-top: 120px;
+  }
+  .subtitle{
+    @extend %font-roboto;
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 16px;
+  }
 }
 
 .nav-list{
@@ -141,6 +175,25 @@
       display: none;
     }
   }
+  .hero-wrapper{
+    .main-heading{
+      text-align: center;
+      font-size: 38px;
+      line-height: 48px;
+      padding: 0px 14px;
+    }
+    .subtitle{
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0px 14px;
+      margin-top: 40px;
+    }
+    .btn-container{
+      display: table;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
@@ -169,5 +222,6 @@
   }
   .quote-btn{
     height: 34px;
+    width: 90px;
   }
 }
