@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "serve": "node app.js",
+    "sass": "gulp sass",
     "test": "npm test"
   },
   "author": "",

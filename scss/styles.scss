@@ -1,22 +1,38 @@
 @font-face{
   font-family: 'Roboto';
-  src: url(./fonts/Roboto-Regular.woff) format('woff');
+  src: url(../fonts/Roboto-Regular.woff) format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'robotobold';
-  src: url(./fonts/Roboto-Bold.woff) format('woff');
+  src: url(../fonts/Roboto-Bold.woff) format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face{
   font-family: 'robotomedium';
-  src: url(./fonts/Roboto-Medium.woff) format('woff');
+  src: url(../fonts/Roboto-Medium.woff) format('woff');
   font-weight: 500;
   font-style: normal;
+}
+
+%font-roboto{
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+}
+
+%roboto-bold{
+  font-family: robotobold, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 *{
@@ -33,40 +49,37 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  justify-content: space-between;
+  height: 50px;
 
-  li, a, .quote-btn{
-    font-family: robotobold, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0;
-    text-align: center;
+  .hnav-item, .hnav-link{
+    @extend %roboto-bold;
   }
-  li, a, a:hover{
+  .hnav-item, .hnav-link, .hnav-link:hover{
     color: #42415B;
   }
-  li {
+  .hnav-item {
     display: inline;
     padding-right: 10px;
     line-height: 16px;
   }
-  a{
+  .hnav-link{
     text-decoration: none;
     text-transform: uppercase;
     line-height: 16px;
   }
-  .quote-btn{
-    height: 50px;
-    width: 160px;
-    border-radius: 4px;
-    background-color: #F1A153;
-    color: #fff;
-    border: none;
-    line-height: 20px;
-    text-transform: uppercase;
-  }
-  .btn:hover{
-    color: #fff;
-  }
+}
+
+.quote-btn{
+  height: 50px;
+  width: 160px;
+  border-radius: 4px;
+  background-color: #F1A153;
+  color: #fff;
+  border: none;
+  line-height: 20px;
+  text-transform: uppercase;
+  @extend %roboto-bold;
 }
 
 .logo-placeholder {
@@ -74,12 +87,87 @@
   width: 116px;
 }
 
-.logo-placeholder-tablet-logo-p {
-  height: 40px;
-  width: 116px;
+.ham-menu{
+  display: none;
+  padding: .25rem .75rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
 }
 
-.logo-placeholder-mobile-logo-p {
-  height: 27px;
-  width: 75px;
+.navbar{
+  padding: 0 !important;
+}
+
+.nav-container{
+  background-color: #9CA2C6;
+  height: 50px;
+  padding: 0;
+}
+
+.nav-list{
+  @extend %font-roboto;
+
+  .nav-item{
+    padding-inline-end: 92.5px;
+  }
+  .nav-item:last-child{
+    padding-inline-end: 0;
+  }
+  .nav-link{
+    color: #fff;
+  }
+  .nav-link:hover{
+    color: #fff;
+  }
+}
+
+.phone-icon{
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (max-width: 1024px){
+  .ham-menu{
+    display: block;
+  }
+  .navbar{
+    display: none !important;
+  }
+  .header-nav{
+    justify-content: flex-end;
+
+    #payments, #claims{
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .quote-btn{
+    height: 40px;
+  }
+  .header-row{
+    padding: 10px 0px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .logo-placeholder {
+    height: 27px;
+    width: 75px;
+  }
+  .phone-icon{
+    width: 22px;
+    height: 22px;
+  }
+  #phone{
+    display: none;
+  }
+  .header-row{
+    padding: 9px 0px;
+  }
+  .quote-btn{
+    height: 34px;
+  }
 }
