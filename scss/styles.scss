@@ -24,7 +24,6 @@
   font-size: 18px;
   letter-spacing: 0;
   line-height: 20px;
-  text-align: center;
 }
 
 %roboto-bold{
@@ -32,7 +31,6 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0;
-  text-align: center;
 }
 
 *{
@@ -133,7 +131,6 @@
   .subtitle{
     @extend %font-roboto;
     color: #fff;
-    text-align: left;
     line-height: 30px;
     margin-top: 16px;
   }
@@ -159,6 +156,94 @@
 .phone-icon{
   width: 16px;
   height: 16px;
+}
+
+.products-wrapper{
+  background-color: #F3F3FF;
+}
+
+.products-title{
+  color: #42415B;
+  @extend %roboto-bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.products-list{
+  list-style: none;
+  justify-content: space-between;
+}
+
+.product-item{
+  @extend %font-roboto;
+  color: #42415B;
+  padding: 26px;
+  background-color: #fff;
+  border: 1px solid #d5d8eb;
+  height: 183px;
+  width: 165px;
+  border-radius: 3px;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline-end: 1.5vw;
+}
+
+.product-item:hover{
+  background-color: #BABDCF;
+  color: #fff;
+}
+
+.product-item:last-child{
+  margin-inline-end: 0;
+}
+
+.product-name{
+  margin-top: 20px;
+}
+
+.check-list{
+  list-style: none;
+}
+
+.first-title,
+.second-title,
+.list-heading{
+  @extend %roboto-bold;
+  color: #42415B;
+}
+
+.first-title{
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.second-title{
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.list-heading{
+  font-size: 20px;
+  line-height: 31px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.first-paraghraph,
+.second-paraghraph{
+  @extend %font-roboto;
+}
+
+.first-paraghraph{
+  color: #170307;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.second-paraghraph{
+  color: #42415B;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 1024px){
@@ -194,6 +279,10 @@
       margin: 0 auto;
     }
   }
+  .products-list{
+    list-style: none;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
@@ -202,6 +291,11 @@
   }
   .header-row{
     padding: 10px 0px;
+  }
+  .product-item{
+    margin-bottom: 20px;
+    height: 140px;
+    width: 210px;
   }
 }
 
@@ -213,6 +307,7 @@
   .phone-icon{
     width: 22px;
     height: 22px;
+    cursor: pointer;
   }
   #phone{
     display: none;
@@ -223,5 +318,26 @@
   .quote-btn{
     height: 34px;
     width: 90px;
+  }
+  .hero-quote-btn{
+    width: 290px;
+  }
+  .product-item{
+    flex-direction: row;
+    height: 60px;
+    width: 75vw;
+    margin-inline-end: 0;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+  .product-name{
+    margin-left: 25px;
+    margin-top: 0;
+  }
+  .list-heading{
+    margin-top: 10px;
+  }
+  .check-item{
+    align-items: baseline;
   }
 }
