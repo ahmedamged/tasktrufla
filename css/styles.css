@@ -16,14 +16,16 @@
   font-weight: 500;
   font-style: normal; }
 
-.hero-quote-btn, .hero-wrapper .subtitle, .nav-list, .product-item, .first-paraghraph,
+.hero-quote-btn, .hero-wrapper .subtitle, .nav-list, .product-item, .product-link, .first-paraghraph,
 .second-paraghraph {
   font-family: Roboto, sans-serif;
   font-size: 18px;
   letter-spacing: 0;
   line-height: 20px; }
 
-.header-nav .hnav-item, .header-nav .hnav-link, .quote-btn, .hero-wrapper .main-heading, .products-title, .first-title,
+.header-nav .hnav-item,
+.header-nav .hnav-link, .quote-btn,
+.mnav-quote-btn, .hero-wrapper .main-heading, .mnav-list, .products-title, .first-title,
 .second-title,
 .list-heading {
   font-family: robotobold, sans-serif;
@@ -45,7 +47,9 @@
   padding: 0;
   justify-content: space-between;
   height: 50px; }
-  .header-nav .hnav-item, .header-nav .hnav-link, .header-nav .hnav-link:hover {
+  .header-nav .hnav-item,
+  .header-nav .hnav-link,
+  .header-nav .hnav-link:hover {
     color: #42415B; }
   .header-nav .hnav-item {
     display: inline;
@@ -56,7 +60,8 @@
     text-transform: uppercase;
     line-height: 16px; }
 
-.quote-btn {
+.quote-btn,
+.mnav-quote-btn {
   height: 50px;
   width: 160px; }
 
@@ -67,7 +72,9 @@
   margin-top: 64px;
   margin-bottom: 64px; }
 
-.quote-btn, .hero-quote-btn {
+.quote-btn,
+.hero-quote-btn,
+.mnav-quote-btn {
   border-radius: 4px;
   background-color: #F1A153;
   color: #fff;
@@ -80,7 +87,6 @@
   width: 116px; }
 
 .ham-menu {
-  display: none;
   padding: .25rem .75rem;
   background-color: transparent;
   border: 1px solid transparent;
@@ -109,19 +115,43 @@
     line-height: 30px;
     margin-top: 16px; }
 
-.nav-list .nav-item {
-  padding-inline-end: 92.5px; }
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: flex; }
+  .nav-list .navbar-item {
+    padding-inline-end: 92.5px; }
+  .nav-list .navbar-item:last-child {
+    padding-inline-end: 0; }
+  .nav-list .navbar-link {
+    color: #fff;
+    text-decoration: none; }
+  .nav-list .navbar-link:hover {
+    color: #fff; }
 
-.nav-list .nav-item:last-child {
-  padding-inline-end: 0; }
+.mnav-list {
+  list-style: none;
+  color: #42415B;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase; }
 
-.nav-list .nav-link {
-  color: #fff; }
+.mnav-item {
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 16px; }
 
-.nav-list .nav-link:hover {
-  color: #fff; }
+.mnav-link {
+  color: #42415B;
+  text-decoration: none; }
 
-.phone-icon {
+.mnav-link:hover {
+  color: #42415B; }
+
+.phone-icon,
+.mnav-phone-icon {
   width: 16px;
   height: 16px; }
 
@@ -159,8 +189,30 @@
 .product-name {
   margin-top: 20px; }
 
-.check-list {
+.check-list,
+.products-links {
   list-style: none; }
+
+.products-links {
+  background-color: #F3F3FF;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 8px #9ca2c6; }
+
+.product-link {
+  text-decoration: none;
+  color: #42415B; }
+
+.product-link:hover {
+  color: #9CA2C6; }
+
+#navbarDropdown {
+  position: relative; }
+
+#navbarNav {
+  margin: 0 auto; }
 
 .first-title,
 .second-title,
@@ -192,10 +244,6 @@
   line-height: 30px; }
 
 @media screen and (max-width: 1024px) {
-  .ham-menu {
-    display: block; }
-  .navbar {
-    display: none !important; }
   .header-nav {
     justify-content: flex-end; }
     .header-nav #payments, .header-nav #claims {
@@ -258,4 +306,34 @@
   .list-heading {
     margin-top: 10px; }
   .check-item {
-    align-items: baseline; } }
+    align-items: baseline; }
+  .nav-list {
+    display: block; }
+  .nav-container {
+    background-color: #fff;
+    height: 100%; }
+  #navbarNav {
+    width: inherit;
+    margin: 0 15px 25px; }
+  .nav-list {
+    margin: 0; }
+    .nav-list .navbar-item {
+      padding: 21px 0;
+      border-bottom: 1px solid #BBBED0; }
+    .nav-list .navbar-link,
+    .nav-list .navbar-link:hover {
+      color: #42415B; }
+  .products-links {
+    background-color: #fff;
+    box-shadow: none;
+    position: inherit;
+    padding: 15px 0; }
+    .products-links .product-link {
+      font-size: 14px;
+      margin-bottom: 5px; }
+    .products-links .product-link,
+    .products-links .product-link:hover {
+      color: #7C809B; }
+  .dropdown-toggle::after {
+    position: relative;
+    margin-top: 8px; } }
