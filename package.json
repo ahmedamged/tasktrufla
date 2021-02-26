@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "sass": "gulp sass",
-    "test": "npm test"
+    "sass": "gulp sass"
   },
   "author": "",
   "license": "ISC",

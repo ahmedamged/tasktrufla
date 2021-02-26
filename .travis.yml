@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - "stable"
 cache: npm
+script: 'true'
 before_script:
 - npm install
 deploy:
