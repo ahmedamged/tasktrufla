@@ -21,6 +21,12 @@ $(document).ready(function(){
 
     $('#hamburger').on('click', function functionName() {
       $('.navbar').toggleClass('d-none');
+      if ($('.navbar').hasClass('d-none')) {
+        $('#hamburger').attr("aria-expanded","false");
+      }
+      else {
+        $('#hamburger').attr("aria-expanded","true");
+      }
       if ($(window).width() <= 768){
         $('.quote-btn').toggleClass('d-none');
         $('.phone-icon').toggleClass('d-none');
