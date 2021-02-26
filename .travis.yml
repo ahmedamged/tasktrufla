@@ -14,5 +14,6 @@ deploy:
   app: tasktrufla
   skip_cleanup: true
   email: false
+  github-token: $GITHUB_TOKEN
   on:
       branch: master
