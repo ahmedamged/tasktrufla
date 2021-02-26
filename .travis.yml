@@ -14,4 +14,4 @@ deploy:
   skip_cleanup: true
   email: false
   on:
-      branch: heroku master
+      branch: master
