@@ -5,9 +5,12 @@ cache: npm
 script: 'true'
 before_script:
 - npm install
+script:
+- git push heroku master
 deploy:
   provider: heroku:git
-  api_key: d64ad810-1521-4f2a-95e4-4dd4b99f85a4
+  api_key:
+    secure: d64ad810-1521-4f2a-95e4-4dd4b99f85a4
   app: tasktrufla
   skip_cleanup: true
   email: false
