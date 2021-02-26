@@ -21,16 +21,21 @@
 
 %font-roboto{
   font-family: Roboto, sans-serif;
-  font-size: 18px;
   letter-spacing: 0;
-  line-height: 20px;
 }
 
 %roboto-bold{
   font-family: robotobold, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
   letter-spacing: 0;
+}
+
+@mixin roboto-medium(){
+  font-family: robotomedium, sans-serif;
+  letter-spacing: 0;
+}
+
+%roboto-medium {
+  @include roboto-medium();
 }
 
 *{
@@ -53,6 +58,8 @@
   .header-nav-item,
   .header-nav-link,{
     @extend %roboto-bold;
+    font-size: 14px;
+    line-height: 16px;
   }
   .header-nav-item,
   .header-nav-link,
@@ -62,12 +69,10 @@
   .header-nav-item{
     display: inline;
     padding-right: 10px;
-    line-height: 16px;
   }
   .header-nav-link{
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 16px;
   }
 }
 
@@ -76,13 +81,16 @@
   height: 50px;
   width: 160px;
   @extend %roboto-bold;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .hero-quote-btn{
   height: 60px;
   width: 200px;
-  @extend %font-roboto;
+  @extend %roboto-medium;
   font-size: 18px;
+  line-height: 24px;
   margin-top: 64px;
   margin-bottom: 64px;
 }
@@ -94,7 +102,6 @@
   background-color: #F1A153;
   color: #fff;
   border: none;
-  line-height: 20px;
   text-transform: uppercase;
 }
 
@@ -111,7 +118,7 @@
 }
 
 .navbar{
-  padding: 0 !important;
+  padding: 0;
 }
 
 .nav-container{
@@ -127,15 +134,16 @@
 
   .main-heading{
     @extend %roboto-bold;
-    font-size: 66px;
     color: #fff;
     text-align: left;
+    font-size: 66px;
     line-height: 80px;
     margin-top: 120px;
   }
-  .subtitle{
+  .main-subtitle{
     @extend %font-roboto;
     color: #fff;
+    font-size: 18px;
     line-height: 30px;
     margin-top: 16px;
   }
@@ -199,6 +207,7 @@
   color: #42415B;
   @extend %roboto-bold;
   font-size: 50px;
+  line-height: 60px;
   text-align: center;
 }
 
@@ -231,6 +240,8 @@
 }
 
 .product-name{
+  font-size: 16px;
+  line-height: 24px;
   margin-top: 20px;
 }
 
@@ -243,7 +254,7 @@
   background-color: #F3F3FF;
   position: absolute;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 11px;
   padding: 1.5rem;
   box-shadow: 8px 8px 8px #9ca2c6;
 }
@@ -264,6 +275,12 @@
 
 #navbarNav{
   margin: 0 auto;
+}
+
+.first,
+.second,
+.check-list{
+  padding: 0 3rem;
 }
 
 .first-title,
@@ -308,7 +325,7 @@
 }
 
 .dropdown-toggle::after{
-  display: none !important;
+  display: none;
 }
 
 @media screen and (max-width: 1024px){
@@ -326,7 +343,7 @@
       line-height: 48px;
       padding: 0px 14px;
     }
-    .subtitle{
+    .main-subtitle{
       text-align: center;
       font-size: 16px;
       line-height: 24px;
@@ -341,6 +358,9 @@
   .products-list{
     list-style: none;
     justify-content: center;
+  }
+  .products-title{
+    font-size: 30px;
   }
 }
 
@@ -377,6 +397,9 @@
   .quote-btn{
     height: 34px;
     width: 90px;
+    @include roboto-medium();
+    font-size: 12px;
+    line-height: 20px;
   }
   .hero-quote-btn{
     width: 290px;
@@ -443,9 +466,26 @@
     }
   }
   .dropdown-toggle::after{
-    display: inline-block !important;
+    display: inline-block;
     position: absolute;
     right: 0;
     margin-top: 12px;
+  }
+  .first,
+  .second,
+  .check-list{
+    padding: 0;
+  }
+  .first-title{
+    font-size: 30px;
+    line-height: 48px;
+  }
+  .second-title{
+    font-size: 22px;
+    line-height: 37px;
+  }
+  .list-heading{
+    font-size: 20px;
+    line-height: 31px;
   }
 }

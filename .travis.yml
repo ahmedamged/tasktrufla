@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- "stable"
+cache: npm
+deploy:
+  provider: heroku:git
+  api_key: d64ad810-1521-4f2a-95e4-4dd4b99f85a4
+  app: tasktrufla
+  domain: https://tasktrufla.herokuapp.com
+  skip_cleanup: true
+  email: false
+  on:
+      branch: heroku master
