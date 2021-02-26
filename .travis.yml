@@ -2,6 +2,10 @@ language: node_js
 node_js:
 - "stable"
 cache: npm
+before_script:
+- npm install
+script:
+- npm run build
 deploy:
   provider: heroku:git
   api_key: d64ad810-1521-4f2a-95e4-4dd4b99f85a4
