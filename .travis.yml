@@ -5,7 +5,7 @@ cache: npm
 script: 'true'
 before_script:
 - npm install
-script:
+after_script:
 - git push heroku master
 deploy:
   provider: heroku:git
