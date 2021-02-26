@@ -23,9 +23,9 @@
   letter-spacing: 0;
   line-height: 20px; }
 
-.header-nav .hnav-item,
-.header-nav .hnav-link, .quote-btn,
-.mnav-quote-btn, .hero-wrapper .main-heading, .mnav-list, .products-title, .first-title,
+.header-nav .header-nav-item,
+.header-nav .header-nav-link, .quote-btn,
+.mobile-nav-quote-btn, .hero-wrapper .main-heading, .mobile-nav-list, .products-title, .first-title,
 .second-title,
 .list-heading {
   font-family: robotobold, sans-serif;
@@ -47,21 +47,21 @@
   padding: 0;
   justify-content: space-between;
   height: 50px; }
-  .header-nav .hnav-item,
-  .header-nav .hnav-link,
-  .header-nav .hnav-link:hover {
+  .header-nav .header-nav-item,
+  .header-nav .header-nav-link,
+  .header-nav .header-nav-link:hover {
     color: #42415B; }
-  .header-nav .hnav-item {
+  .header-nav .header-nav-item {
     display: inline;
     padding-right: 10px;
     line-height: 16px; }
-  .header-nav .hnav-link {
+  .header-nav .header-nav-link {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 16px; }
 
 .quote-btn,
-.mnav-quote-btn {
+.mobile-nav-quote-btn {
   height: 50px;
   width: 160px; }
 
@@ -74,7 +74,7 @@
 
 .quote-btn,
 .hero-quote-btn,
-.mnav-quote-btn {
+.mobile-nav-quote-btn {
   border-radius: 4px;
   background-color: #F1A153;
   color: #fff;
@@ -130,7 +130,7 @@
   .nav-list .navbar-link:hover {
     color: #fff; }
 
-.mnav-list {
+.mobile-nav-list {
   list-style: none;
   color: #42415B;
   display: flex;
@@ -138,20 +138,20 @@
   text-align: center;
   text-transform: uppercase; }
 
-.mnav-item {
+.mobile-nav-item {
   margin-bottom: 25px;
   font-size: 14px;
   line-height: 16px; }
 
-.mnav-link {
+.mobile-nav-link {
   color: #42415B;
   text-decoration: none; }
 
-.mnav-link:hover {
+.mobile-nav-link:hover {
   color: #42415B; }
 
 .phone-icon,
-.mnav-phone-icon {
+.mobile-nav-phone-icon {
   width: 16px;
   height: 16px; }
 
@@ -243,6 +243,9 @@
   font-size: 18px;
   line-height: 30px; }
 
+.dropdown-toggle::after {
+  display: none !important; }
+
 @media screen and (max-width: 1024px) {
   .header-nav {
     justify-content: flex-end; }
@@ -320,6 +323,9 @@
     .nav-list .navbar-item {
       padding: 21px 0;
       border-bottom: 1px solid #BBBED0; }
+    .nav-list .navbar-link {
+      display: flex;
+      width: inherit; }
     .nav-list .navbar-link,
     .nav-list .navbar-link:hover {
       color: #42415B; }
@@ -335,5 +341,7 @@
     .products-links .product-link:hover {
       color: #7C809B; }
   .dropdown-toggle::after {
-    position: relative;
-    margin-top: 8px; } }
+    display: inline-block !important;
+    position: absolute;
+    right: 0;
+    margin-top: 12px; } }
