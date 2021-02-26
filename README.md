@@ -15,3 +15,7 @@ Starting app for development mode:
 Converting SCSS styles to CSS file using Gulp:
 
      npm run sass
+
+For deploying to heroku:
+
+     git push heroku master

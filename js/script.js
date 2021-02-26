@@ -9,9 +9,11 @@ $(document).ready(function(){
       if ($(window).width() <= 768){
         $('.quote-btn').html("QUOTE");
         $('.navbar-item:first-child .navbar-link').addClass('dropdown-toggle');
+        $('#phone').addClass('d-none');
       }
       else{
         $('.quote-btn').html("GET A QUOTE");
+        $('#phone').removeClass('d-none');
       }
     }).trigger('resize');
 
@@ -30,6 +32,12 @@ $(document).ready(function(){
       if ($(window).width() <= 768){
         $('.quote-btn').toggleClass('d-none');
         $('.phone-icon').toggleClass('d-none');
+      }
+    });
+
+    $('.phone-icon').on('click', function(){
+      if ($(window).width() <= 768){
+        $('#phone').toggleClass('d-none');
       }
     });
 });

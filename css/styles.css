@@ -302,8 +302,6 @@
     width: 22px;
     height: 22px;
     cursor: pointer; }
-  #phone {
-    display: none; }
   .header-row {
     padding: 9px 0px; }
   .quote-btn {
@@ -376,4 +374,14 @@
     line-height: 37px; }
   .list-heading {
     font-size: 20px;
-    line-height: 31px; } }
+    line-height: 31px; }
+  .phone-icon {
+    position: relative; }
+  #phone {
+    position: absolute;
+    background-color: white;
+    padding: 10px 17px;
+    border: 1px solid #42415b;
+    border-radius: 5px;
+    margin-left: -30px;
+    margin-top: 30px; } }
