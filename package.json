@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node app.js",
     "sass": "gulp sass",
-    "build": "git push heroku master",
     "test": "npm test"
   },
   "author": "",
